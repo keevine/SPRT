@@ -1,0 +1,35 @@
+{
+    "paths": [
+        {
+            "name": "/greeting",
+            "lambdaFunction": "mygofunction",
+            "privacy": {
+                "open": true
+            },
+            "policyResourceName": "/greeting"
+        }
+    ],
+    "resourceName": "SPRTapi",
+    "apiName": "SPRTapi",
+    "functionArns": [
+        {
+            "lambdaFunction": "mygofunction"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "amplify-sprt-dev-164057-authRole",
+        "unAuthRoleName": "amplify-sprt-dev-164057-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "mygofunction",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}
